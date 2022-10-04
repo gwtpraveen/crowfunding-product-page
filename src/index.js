@@ -1,4 +1,13 @@
 import "./styles/main.scss";
-import images from "./images/icon-check.svg";
 
-console.log("hi")
+const navEl = document.getElementById("nav");
+const hamburgerIcon = document.querySelector(".hamburger-icon");
+const closeIcon = document.querySelector(".close-icon");
+
+hamburgerIcon.addEventListener("click", () => {
+    navEl.classList.add("open");
+});
+
+closeIcon.addEventListener("click", () => {
+    navEl.classList.remove("open");
+});
