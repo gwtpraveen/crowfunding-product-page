@@ -13,6 +13,7 @@
 
 body {
     font-family: 'Commissioner', sans-serif;
+    line-height: 29px;
 }
 
 // #################
@@ -152,7 +153,7 @@ body {
         }
 
         &-discription {
-            margin: 1.5rem 0;
+            margin: .8rem 0 1.8rem 0;
             color: $color-dark-gray;
         }
 
@@ -234,6 +235,79 @@ body {
         }
     }
 
+    // #################################
+    // last section
+    // #################################
+
+    .last-section {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 2rem 1rem;
+        color: $color-dark-gray;
+
+        .h2 {
+            color: $color-black;
+        }
+
+        &-discription-1 {
+            margin: 1.5rem 0;
+        }
+
+        .card {
+            outline: 1px solid $color-dark-gray;
+            border-radius: 10px;
+            padding: 2rem 1rem;
+            margin: 2rem 0;
+            &-header {
+                &-name {
+                    font-weight: 700;
+                    margin-bottom: .5rem;
+                    color: $color-black;
+                }
+
+                &-price {
+                    color: $color-moderate-cyan;
+                    font-weight: 500;
+                }
+            }
+
+            &-discription {
+                margin: 1.5rem 0;
+            }
+
+            &-footer {
+                &-left {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 2rem;
+                    &-number {
+                        font-weight: 700;
+                        font-size: 2rem;
+                        margin-right: .8rem;
+                        color: $color-black;
+                    }
+                }
+            }
+        }
+
+        .card.disable {
+            opacity: .5;
+            outline-color: hsl(0, 0%, 82%);
+
+            .card-footer {
+                .btn {
+                    background-color: $color-dark-gray;
+                    color: #fff;
+                    cursor: not-allowed;
+                
+                    &:hover {
+                        background-color: $color-dark-gray;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 @media (min-width: 640px) {
@@ -245,6 +319,32 @@ body {
                 .bookmark {
                     .bookmark-text {
                         display: block;
+                    }
+                }
+            }
+        }
+
+        // #################################
+        // last section
+        // #################################
+
+        .last-section {
+            .card {
+                &-header, &-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                &-header {
+                    &-name {
+                        margin-bottom: 0;
+                    }
+                }
+
+                &-footer {
+                    &-left {
+                        margin-bottom: 0;
                     }
                 }
             }
