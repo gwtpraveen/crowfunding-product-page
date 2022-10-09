@@ -1,4 +1,5 @@
 const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -50,6 +51,16 @@ module.exports = {
             title: "crowdfunding product",
             filename: "index.html",
             template: "src/template.html"
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                  from: "src/images/*",
+                  to({ context, absoluteFilename }) {
+                    return "images/[name][ext]";
+                  }
+                }
+            ]
         })
     ]
 }
