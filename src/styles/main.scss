@@ -432,3 +432,48 @@ body {
         }
     }
 }
+
+
+// ######################
+// thankz div 
+// ######################
+
+body.thankz {
+    overflow: hidden;
+    .thankz-div {
+        display: block;
+    }
+}
+
+.thankz-div {
+    display: none;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.371);
+    .content {
+        z-index: 100;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 420px;
+        min-width: 320px;
+        text-align: center;
+        padding: 2rem 1rem;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+
+        .h2 {
+            margin-top: 2rem;
+        }
+
+        .discription {
+            margin: 1rem 0 1.5rem;
+            color: $color-dark-gray;
+        }
+
+        .btn {
+            padding: .5em 1em;
+        }
+    }
+}
