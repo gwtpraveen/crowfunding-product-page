@@ -496,7 +496,7 @@ body.thankz {
     &-content {
         z-index: 100;
         position: absolute;
-        top: 5%;
+        top: 50%;
         left: 50%;
         width: 90%;
         max-width: 650px;
@@ -560,6 +560,7 @@ body.thankz {
         &-title {
             margin-left: 1rem;
             font-weight: 700;
+            color: black;
 
             &:hover {
                 color: $color-moderate-cyan;
@@ -677,6 +678,16 @@ body.thankz {
 
         &.disable {
             opacity: .5;
+            cursor: not-allowed;
+
+            .row-header {
+                &-title {
+                    .header-title:hover {
+                        color: black; 
+                        cursor: not-allowed;
+                    }
+                }
+            }
         }
     }
     
